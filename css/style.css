@@ -20,6 +20,7 @@ body {
     table-layout: fixed;
     height: 100vh;
     width: 100%;
+    z-index: 10;
 }
 
 .side {
