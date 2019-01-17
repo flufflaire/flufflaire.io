@@ -14,11 +14,11 @@ body {
 /* intro */
 .intro {
     text-align: center;
-    background-image: url("../images/bg.png");
+    /*background-image: url("../images/bg.png");*/
     background-size: cover;
     display: table;
     table-layout: fixed;
-    height: 100vh;
+    height: 0;
     width: 100%;
     z-index: 10;
 }
