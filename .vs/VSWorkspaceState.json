@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\css",
-    "\\images"
+    "\\images",
+    "\\js"
   ],
-  "SelectedNode": "\\about.html",
+  "SelectedNode": "\\js\\animated-caption.js",
   "PreviewInSolutionExplorer": false
 }

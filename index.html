@@ -1,63 +1,93 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>flufflaire's portfolio</title>
-    <link rel="icon" href="img/swan.png" type="image/x-icon">
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <title>snow</title>
+    <link rel="icon" href="images/snow.png" type="image/x-icon">
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- data -->
     <meta charset="UTF-8">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Faye Zhang">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- end data -->
+
     <!-- main css -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/cover.css" rel="stylesheet">
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script scr="js/animated-caption.js"></script>
+
+    <!-- modernizr -->
+
 
 </head>
 
-<body>
-    <div class="body-container-fluid">
-        <!-- intro -->
-        <section class="intro">
-            <div class="table-cell">
-            </div>
-        </section>
-        <!-- end intro -->
+
+<body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <!-- nav -->
+        <header class="masthead mx-auto">
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">Works</a>
+                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">Contact</a>
+            </nav>
+        </header>
+
+        <!-- background -->
+        <div class="background"></div>
+
         <!-- main -->
-        <div class="main">
-
-            <h1>Hello. I'm Flufflaire!</h1>
-            <p>
-                fyi this is hosted by github pages, so a biiiiiig thank you to them <br />
-                im a poor student i can't afford to host my own website :')
-            </p>
-
-            <div class="works">
-
-                <h3>Traditional Art Works</h3>
-
-                <img src="images/swan.png" alt="swan">
-                <img src="images/kettle.jpg" alt="kettle">
-                <img src="images/apples.png" alt="apples">
-                <img src="images/goblet.png" alt="goblet">
-
+        <main role="main" class="inner cover">
+            <div class="container">
+                <h1 class="ml11">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters">the winter season is warm</span>
+                    </span>
+                </h1>
+                <p class="lead"><i>it's true</i></p>
             </div>
+        </main>
+
+        <!-- <div class="main">
+
+        <h1>Hello. I'm Flufflaire!</h1>
+        <p>
+            fyi this is hosted by github pages, so a biiiiiig thank you to them <br />
+            im a poor student i can't afford to host my own website :')
+        </p>
+
+        <div class="works">
+
+            <h3>Traditional Art Works</h3>
+
+            <img src="images/swan.png" alt="swan">
+            <img src="images/kettle.jpg" alt="kettle">
+            <img src="images/apples.png" alt="apples">
+            <img src="images/goblet.png" alt="goblet">
+
         </div>
+        </div> -->
         <!-- end main -->
+
+        <div id="shimai-world" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 2147483647; pointer-events: none; background: transparent;"></div>
 
     </div>
 
-    <!-- Optional JavaScript -->
+    <!-- JavaScript -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
 </body>
 </html>
