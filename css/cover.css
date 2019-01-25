@@ -48,19 +48,9 @@ body {
 }
 
 
-.caption-container {
-    position: absolute;
-    top: 52%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-}
-
-
 .container {
     position: absolute;
-    top: 58%;
+    top: 55%;
     left: 50%;
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
