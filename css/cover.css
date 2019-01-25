@@ -47,61 +47,24 @@ body {
     z-index: -1;
 }
 
-.container {
+
+.caption-container {
     position: absolute;
-    top: 55%;
+    top: 52%;
     left: 50%;
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
 
-.container .h1 {
-    z-index: 1;
-    color: white; /* Fallback: assume this color ON TOP of image */
-    background: url(../images/snow.gif) no-repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
-.main .h1 {
-    font: Roboto;
-    letter-spacing: 3px;
-    background-color: transparent;
-    border-bottom: .25rem solid transparent;
-}
-
-.ml11 {
-    font-weight: 900;
-    font-size: 2.5em;
-}
-
-.ml11 .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.1em;
-    padding-right: 0.05em;
-    padding-bottom: 0.15em;
-}
-
-.ml11 .line {
-    opacity: 0;
+.container {
     position: absolute;
-    left: 0;
-    height: 100%;
-    width: 3px;
-    background-color: #fff;
-    transform-origin: 0 50%;
-}
-
-.ml11 .line1 {
-    top: 0;
-    left: 0;
-}
-
-.ml11 .letter {
-    display: inline-block;
-    line-height: 1em;
+    top: 58%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .cover-container {
