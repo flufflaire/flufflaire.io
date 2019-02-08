@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+ï»¿@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* general */
 html,
@@ -20,6 +20,14 @@ body {
     background-image: url("../img/lights.png");
 }
 
+.bg-container {
+    display: table;
+    table-layout: fixed;
+    height: 50px;
+    width: 100%;
+    z-index: 10;
+}
+
 .intro {
     display: table;
     table-layout: fixed;
@@ -28,16 +36,48 @@ body {
     z-index: 10;
 }
 
-/*.main .works{
+.main .works{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-}*/
+}
 
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;
+    }
+}
+
+@keyframes box-to-circle {
+    0% {
+        border-radius: 0 0 0 0;
+        background: #E2A9E5;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        border-radius: 25%;
+        background: #632C65;
+        transform: rotate(45deg);
+    }
+
+    50% {
+        border-radius: 50%;
+        background: #4B384C;
+        transform: rotate(90deg);
+    }
+
+    75% {
+        border-radius: 25%;
+        background: #632c65;
+        transform: rotate(135deg);
+    }
+
+    100% {
+        border-radius: 0;
+        background: #e2a9e5;
+        transform: rotate(180deg);
     }
 }
 
@@ -47,7 +87,7 @@ body {
  *
  * Version: v2.5.0
  *
- * Authors: Björn Brala (SWIS.nl), Rodney Rehm, Addy Osmani (patches for FF)
+ * Authors: Bjï¿½rn Brala (SWIS.nl), Rodney Rehm, Addy Osmani (patches for FF)
  * Web: http://swisnl.github.io/jQuery-contextMenu/
  *
  * Copyright (c) 2011-2017 SWIS BV and contributors
