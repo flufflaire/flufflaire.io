@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* Links */
 a,
@@ -39,11 +39,7 @@ body {
 }
 
 .background {
-    height: 100%;
-    animation: load 0.6s ease-in-out;
-    background: url("../images/snow.gif") no-repeat;
-    background-size: 2100px 1400px;
-    z-index: -1;
+    height: auto;
 }
 
 .caption-container {
