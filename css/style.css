@@ -25,9 +25,6 @@ body {
     text-align: center;
     font-family: 'Roboto';
     letter-spacing: 3px;
-    /* background: linear-gradient(270deg, #ffead1, #ffb6bd, #e0b5ff);
-    background-size: 150% 150%;
-    animation: backgroundAnimation 10s ease infinite; */
 }
 
 body {
@@ -97,13 +94,6 @@ body {
     height: 0;
     width: 100%;
     z-index: 10;
-}
-
-.main .works {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 img {
