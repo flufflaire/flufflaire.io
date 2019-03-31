@@ -86,9 +86,17 @@ img {
 }
 
 .work {
+    z-index: -1;
     padding: 5px;
     width: 200px;
     height: auto;
+    transition: transform .2s;
+}
+
+.work:hover {
+    z-index: 9999;
+    position: relative;
+    margin:0 auto;
 }
 
 @media (min-width: 768px) {
