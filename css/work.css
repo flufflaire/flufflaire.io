@@ -93,12 +93,6 @@ img {
     transition: transform .2s;
 }
 
-.work:hover {
-    z-index: 9999;
-    position: relative;
-    margin:0 auto;
-}
-
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;
