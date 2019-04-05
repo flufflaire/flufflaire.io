@@ -21,7 +21,7 @@ a:hover {
 /* general */
 html,
 body {
-    height: auto;
+    height: 100%;
     text-align: center;
     font-family: 'Roboto';
     letter-spacing: 3px;
@@ -68,7 +68,6 @@ body {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
 }
 
 .intro {
@@ -91,6 +90,26 @@ img {
     width: 200px;
     height: auto;
     transition: transform .2s;
+}
+
+a {
+    color: rgba(0, 0, 26, .5);
+}
+
+a:hover {
+    color: rgba(0, 0, 206, .5);
+}
+
+a:active {
+    color: rgba(0, 0, 206, .5);
+}
+
+a:visited {
+    color: rgba(0, 0, 206, .5);
+}
+
+i {
+    color: rgba(0, 0, 26, .5);
 }
 
 @media (min-width: 768px) {

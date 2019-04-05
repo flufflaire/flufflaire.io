@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\css",
-    "\\images",
+    "\\images\\vex",
+    "\\images\\vex\\2018",
     "\\js"
   ],
-  "SelectedNode": "\\vex.html",
+  "SelectedNode": "\\css\\climb.css",
   "PreviewInSolutionExplorer": false
 }
