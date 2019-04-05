@@ -20,8 +20,8 @@ body {
     color: rgba(0, 0, 26, .5);
     position: absolute;
     top: 20%;
-    left: 40%;
-    animation: hov 10s linear infinite alternate;
+    left: 20%;
+    animation: hov 30s linear infinite alternate;
 }
 
 @keyframes hov {
@@ -30,15 +30,15 @@ body {
     }
 
     25% {
-        transform: scale(0.5);
+        transform: scale(0.2);
     }
 
     50% {
-        transform: scale(1);
+        transform: scale(0.5);
     }
 
     75% {
-        transform: scale(1.5);
+        transform: scale(0.2);
     }
 
     100% {

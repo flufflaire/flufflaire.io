@@ -170,3 +170,16 @@ i {
         float: right;
     }
 }
+
+.load {
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.load img {
+    transform: scale(0.2);
+}
