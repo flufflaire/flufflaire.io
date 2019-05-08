@@ -77,6 +77,10 @@ body {
     position: relative;
 }
 
+.btn {
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
 .back {
     color: rgba(0, 0, 26, .5);
     position: absolute;
