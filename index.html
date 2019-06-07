@@ -1,59 +1,253 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>faye zhang</title>
-    <link rel="icon" href="images/snow.png" type="image/x-icon">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- data -->
     <meta charset="UTF-8">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <meta name="author" content="Faye Zhang">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- main css -->
-    <link href="css/cover.css" rel="stylesheet">
-
-    <!-- script -->
-    <!-- <script scr="js/animated-caption.js"></script> -->
-
-    <!-- modernizr -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Faye Zhang</title>
 
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+        @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+        html,
+        body {
+            height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Amatic SC', cursive;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+
+        h1 {
+            font-size: 8vw;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 3.5vw;
+            padding-top: 2vh;
+        }
+
+        p {
+            font-size: 3vw;
+            font-family: 'Fredericka the Great', cursive;
+        }
+
+        a {
+            color: rgb(34, 34, 133);
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: line-through;
+        }
+
+        .sidenav {
+            height: 0;
+            width: 15vw;
+            position: fixed;
+            z-index: 1;
+
+            top: 0;
+            left: 85vw;
+            background-color: #111;
+            overflow-x: hidden;
+
+            padding-top: 15vh;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .sidenav a {
+            padding: 1.5vh 2vw 1vh 5vw;
+            text-decoration: none;
+            font-size: 2vw;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 2vw;
+            }
+        }
+
+        .main {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, rgb(235, 248, 255) 0%, rgba(239, 253, 255, 0.721) 25%), url("images/bg3.png");
+            background-size: cover;
+            padding: 5vh 20vw 5vh 10vw;
+        }
+
+        .intro {
+            padding: 10vh 10vw;
+        }
+
+        .ml10 {
+            position: relative;
+        }
+
+        .ml10 .text-wrapper {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .ml10 .letter {
+            display: inline-block;
+            transform-origin: 0 0;
+        }
+
+        #mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 3;
+            background-color: rgb(12, 13, 19);
+            display: none;
+        }
+
+        #boxes .window {
+            position: absolute;
+        }
+    </style>
 </head>
 
-<body class="text-center">
-
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-
-        <!-- nav -->
-        <header class="masthead mx-auto">
-            <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link active" href="#0">Cover</a>
-                <a class="nav-link" href="about.html">About</a>
-                <a class="nav-link" href="work.html">Works</a>
-                <a class="nav-link" href="FayeZhangResume.pdf">Resume</a>
-            </nav>
-        </header>
-
-        <!-- background -->
-        <div class="background"></div>
-
-        <!-- main -->
-        <main role="main" class="inner cover">
-            <div class="container">
-                <div class="caption-container">
-                    <h1> the winter season is warm</h1>
-                    <p class="lead"><i> faye's portfolio <br /> winter 2019 </i></p>
-                </div>
-            </div>
-        </main>
+<body>
+    <div id="boxes">
+        <div id="dialog" class="window" style="background-color: white; padding: 1vw; text-align: center; height: 30vh; width: 30vw; border-radius: 2vw; z-index: 4;">
+            <h1 style="font-size: 5vw; padding-top: 6vh;"><a href="https://www.redbubble.com/people/flufflaire/shop"
+                    target="_blank">buy my merch</a></h1>
+            <div id="popupfoot" style="position: absolute; margin-top: -18vh;"><a href="#" class="close agree"><i class="fa fa-close" style="font-size: 2vw;"></i></a></div>
+        </div>
+        <div id="mask"></div>
     </div>
+
+    <div class="main">
+        <div id="mySidenav" class="sidenav">
+            <a href="#0">Work</a>
+            <a href="about.html">About</a>
+            <a href="https://www.redbubble.com/people/flufflaire/shop" target="_blank"><b>NEW MERCH!!</b></a>
+            <a href="FayeZhangResume.pdf">Resume</a>
+        </div>
+
+        <button onclick="toggleNav()" class="btn"
+            style="z-index: 2; position: absolute; margin-top: 2vh; margin-left: 80vw;"><i class="navIcon fa fa-bars"
+                style="font-size: 2vw;"></i></button>
+
+        <div class="intro">
+            <h1 class="ml10">
+                <span class="text-wrapper">
+                    <span class="letters">hi i'm faye zhang</span>
+                </span>
+            </h1>
+            <p>a dreamer 🕊️🌿;<br>
+                a purveyor of art 🎨;<br>
+                a gayme enthusiast 🎲;<br></p>
+            <h2><i>here to spread positivity and climb walls!</i></h2>
+        </div>
+    </div>
+
+
+
+    <script>
+        var navOpen = false;
+
+        $(document).ready(function () {
+            $('.ml10 .letters').each(function () {
+                $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+            });
+
+            anime.timeline({ loop: false })
+                .add({
+                    targets: '.ml10 .letter',
+                    rotateY: [-90, 0],
+                    duration: 1500,
+                    delay: function (el, i) {
+                        return 45 * i;
+                    }
+                });
+
+            var id = '#dialog';
+
+            var maskHeight = $(document).height();
+            var maskWidth = $(window).width();
+
+            $('#mask').css({ 'width': maskWidth, 'height': maskHeight });
+
+            $('#mask').fadeIn(500);
+            $('#mask').fadeTo("slow", 0.9);
+
+            var winH = $(window).height();
+            var winW = $(window).width();
+
+            $(id).css('top', winH / 2 - $(id).height() / 2);
+            $(id).css('left', winW / 2 - $(id).width() / 2);
+
+            $(id).fadeIn(2000);
+
+            $('.window .close').click(function (e) {
+                e.preventDefault();
+
+                $('#mask').hide();
+                $('.window').hide();
+            });
+
+            $('#mask').click(function () {
+                $(this).hide();
+                $('.window').hide();
+            });
+        });
+
+        function toggleNav() {
+            if (navOpen) {
+                $(".navIcon").removeClass("fa-close");
+                $(".navIcon").addClass("fa-bars");
+                $(".navIcon").css("color", "black");
+                document.getElementById("mySidenav").style.height = "0";
+                document.getElementById("mySidenav").style.opacity = "0";
+                document.body.style.backgroundColor = "white";
+                navOpen = false;
+            } else {
+                $(".navIcon").removeClass("fa-bars");
+                $(".navIcon").addClass("fa-close");
+                $(".navIcon").css("color", "#818181");
+                document.getElementById("mySidenav").style.height = "100vh";
+                document.getElementById("mySidenav").style.opacity = "1";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                navOpen = true;
+            }
+        }
+    </script>
+
 </body>
+
 </html>
