@@ -1,12 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <title>Faye Zhang</title>
-
+    <link rel="icon" href="images/bg3.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -100,15 +101,27 @@
             }
         }
 
+        .sect {
+            height: 100vh;
+            scroll-snap-align: start;
+        }
+
         .main {
             height: 100vh;
             background-image: linear-gradient(to bottom, rgb(235, 248, 255) 0%, rgba(239, 253, 255, 0.721) 25%), url("images/bg3.png");
             background-size: cover;
             padding: 5vh 20vw 5vh 10vw;
+            overflow: auto;
+            scroll-snap-type: y mandatory;
         }
 
         .intro {
             padding: 10vh 10vw;
+        }
+
+        .contact i {
+            padding-left: 2vw;
+            font-size: 5vw;
         }
 
         .ml10 {
@@ -138,32 +151,43 @@
         #boxes .window {
             position: absolute;
         }
+
+        .work-container {
+            text-align: center;
+            background-color: white;
+            margin: 10vh 10vw;
+            padding: 10vh 5vw;
+            margin-top: 20vh;
+        }
     </style>
 </head>
 
 <body>
     <div id="boxes">
-        <div id="dialog" class="window" style="background-color: white; padding: 1vw; text-align: center; height: 30vh; width: 30vw; border-radius: 2vw; z-index: 4;">
+        <div id="dialog" class="window"
+            style="background-color: white; padding: 1vw; text-align: center; height: 30vh; width: 30vw; border-radius: 2vw; z-index: 4;">
             <h1 style="font-size: 5vw; padding-top: 6vh;"><a href="https://www.redbubble.com/people/flufflaire/shop"
                     target="_blank">buy my merch</a></h1>
-            <div id="popupfoot" style="position: absolute; margin-top: -18vh;"><a href="#" class="close agree"><i class="fa fa-close" style="font-size: 2vw;"></i></a></div>
+            <div id="popupfoot" style="position: absolute;"><a href="#" class="close agree"><i class="fa fa-close"
+                        style="font-size: 2vw;"></i></a></div>
         </div>
         <div id="mask"></div>
     </div>
 
     <div class="main">
         <div id="mySidenav" class="sidenav">
-            <a href="#0">Work</a>
-            <a href="about.html">About</a>
+            <a href="#intro">About</a>
+            <a href="#work">Work</a>
             <a href="https://www.redbubble.com/people/flufflaire/shop" target="_blank"><b>NEW MERCH!!</b></a>
-            <a href="FayeZhangResume.pdf">Resume</a>
+            <a href="#contact">Contact</a>
+            <a href="https://flufflaire.github.io/FayeZhangResume.pdf">Resume</a>
         </div>
 
         <button onclick="toggleNav()" class="btn"
             style="z-index: 2; position: absolute; margin-top: 2vh; margin-left: 80vw;"><i class="navIcon fa fa-bars"
                 style="font-size: 2vw;"></i></button>
 
-        <div class="intro">
+        <div id="intro" class="sect intro">
             <h1 class="ml10">
                 <span class="text-wrapper">
                     <span class="letters">hi i'm faye zhang</span>
@@ -174,14 +198,76 @@
                 a gayme enthusiast 🎲;<br></p>
             <h2><i>here to spread positivity and climb walls!</i></h2>
         </div>
+
+        <div id="work" class="sect work">
+            [work]
+            <div class="work-container">
+                <div class="row">
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <p>a</p>
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <p>a</p>
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <p>a</p>
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <p>a</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="piece col-md-6 col-sm-12" style="background-color:lightblue;">
+                        <p>b</p>
+                    </div>
+                    <div class="piece col-md-6 col-sm-12" style="background-color:lightgray;">
+                        <p>c</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="piece col-md-6 col-sm-12" style="background-color:lightgray;">
+                        <p>c</p>
+                    </div>
+                    <div class="piece col-md-6 col-sm-12" style="background-color:lightblue;">
+                        <p>b</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="sect contact">
+            [contact]
+            <div class="work-container">
+                <h2 style="margin-top: -2vh;">want to talk to me? no problemo</h2>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <a href="mailto:fzhang@eastsideprep.org"><button class="btn"><i
+                                        class="fa fa-envelope"></i></button></a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://github.com/flufflaire" target="_blank"><button class="btn"><i
+                                        class="fa fa-github"></i></button></a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://www.instagram.com/flufflaire/" target="_blank"><button class="btn"><i
+                                        class="fa fa-instagram"></i></button></a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://flufflaire.tumblr.com/" target="_blank"><button class="btn"><i
+                                        class="fa fa-tumblr"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
 
     <script>
         var navOpen = false;
 
         $(document).ready(function () {
+            //HEADER LOADIN
             $('.ml10 .letters').each(function () {
                 $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
             });
@@ -196,6 +282,10 @@
                     }
                 });
 
+            //BACKGROUND MOVEMENT
+
+
+            //POP UP SAMPLE CODE
             var id = '#dialog';
 
             var maskHeight = $(document).height();
@@ -227,6 +317,7 @@
             });
         });
 
+        //NAV
         function toggleNav() {
             if (navOpen) {
                 $(".navIcon").removeClass("fa-close");
