@@ -10,15 +10,11 @@
     <link rel="icon" href="images/bg3.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
-        @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/customnav.css">
+    <style>
         html,
         body {
             height: 100vh;
@@ -45,6 +41,12 @@
             font-family: 'Fredericka the Great', cursive;
         }
 
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
         a {
             color: rgb(34, 34, 133);
         }
@@ -52,53 +54,6 @@
         a:hover {
             color: black;
             text-decoration: line-through;
-        }
-
-        .sidenav {
-            height: 0;
-            width: 15vw;
-            position: fixed;
-            z-index: 1;
-
-            top: 0;
-            left: 85vw;
-            background-color: #111;
-            overflow-x: hidden;
-
-            padding-top: 15vh;
-            transition: 0.5s;
-            opacity: 0;
-        }
-
-        .sidenav a {
-            padding: 1.5vh 2vw 1vh 5vw;
-            text-decoration: none;
-            font-size: 2vw;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-
-            .sidenav a {
-                font-size: 2vw;
-            }
         }
 
         .main {
@@ -120,10 +75,6 @@
             padding: 10vh 5vw;
         }
 
-        .piece {
-            height: 20vh;
-        }
-
         .contact-container {
             text-align: center;
             background-color: white;
@@ -135,6 +86,13 @@
         .contact i {
             padding-left: 2vw;
             font-size: 5vw;
+        }
+
+        .piece {
+            width: 80vw;
+            height: 40vh;
+            background-size: cover;
+            padding: 0.5vw;
         }
     </style>
 </head>
@@ -161,92 +119,55 @@
         <div id="work" class="sect work">
             <div class="work-container">
                 <div class="row">
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
+                    <div class="piece col-md-4 col-sm-8" style="background-color:lightcyan;">
+                        <img src="images/art/cute.png">
                     </div>
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>r</p>
+                    <div class="piece col-md-4 col-sm-8" style="background-color:lightcyan;">
+                        <img src="images/art/database.png">
                     </div>
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>t</p>
+                    <div class="piece col-md-4 col-sm-8" style="background-color:lightcyan;">
+                        <img src="images/art/kho.png">
                     </div>
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
+                    <div class="piece col-md-4 col-sm-8" style="background-color:lightcyan;">
+                        <img src="images/art/angst.png">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="piece col-md-6 col-sm-12" style="background-color:lightblue;">
-                        <p>b</p>
+                    <div class="piece col-md-4 col-sm-8" style="background-color:lightcyan;">
+                        <img src="images/art/tear.png">
                     </div>
-                    <div class="piece col-md-6 col-sm-12" style="background-color:lightgray;">
-                        <p>c</p>
+                    <div class="piece col-md-4 col-sm-8" style="background-color:lightcyan;">
+                        <img src="images/art/swan.png">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="piece col-md-6 col-sm-12" style="background-color:lightgray;">
-                        <p>c</p>
+                    <div class="piece col-md-4 col-sm-8" style="background-color:lightcyan;">
+                        <img src="images/art/sea.png">
                     </div>
-                    <div class="piece col-md-6 col-sm-12" style="background-color:lightblue;">
-                        <p>b</p>
+                    <div class="piece col-md-8 col-sm-16" style="background-color:lightcyan;">
+                        <img src="images/art/fan.png">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
+                    <div class="piece col-md-4 col-sm-8" style="background-color:lightcyan;">
+                        <img src="images/art/kettle.jpg">
                     </div>
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
+                    <div class="piece col-md-4 col-sm-8" style="background-color:lightcyan;">
+                        <img src="images/art/apples.png">
                     </div>
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
-                    </div>
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="piece col-md-6 col-sm-12" style="background-color:lightblue;">
-                        <p>b</p>
-                    </div>
-                    <div class="piece col-md-6 col-sm-12" style="background-color:lightgray;">
-                        <p>c</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="piece col-md-6 col-sm-12" style="background-color:lightgray;">
-                        <p>c</p>
-                    </div>
-                    <div class="piece col-md-6 col-sm-12" style="background-color:lightblue;">
-                        <p>b</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="piece col-md-6 col-sm-12" style="background-color:lightblue;">
-                        <p>b</p>
-                    </div>
-                    <div class="piece col-md-6 col-sm-12" style="background-color:lightgray;">
-                        <p>c</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
-                    </div>
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
-                    </div>
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
-                    </div>
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
+                    <div class="piece col-md-4 col-sm-8" style="background-color:lightcyan;">
+                        <img src="images/art/acrylic.jpg">
                     </div>
                 </div>
             </div>
         </div>
 
+        <footer>
+            <div style="padding: 1vw;">
+                email: <a href="mailto: fzhang@eastsideprep.org">fzhang@eastsideprep.org</a> <br>
+                ©Faye Zhang's Portfolio 2019
+            </div>
+        </footer>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
         var navOpen = false;
 

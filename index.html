@@ -10,15 +10,12 @@
     <link rel="icon" href="images/bg3.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
-        @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/customnav.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <style>
         html,
         body {
             height: 100vh;
@@ -26,6 +23,7 @@
             font-family: 'Amatic SC', cursive;
         }
 
+        /* when u hate how the scroll bar looks */
         ::-webkit-scrollbar {
             width: 0;
         }
@@ -45,6 +43,12 @@
             font-family: 'Fredericka the Great', cursive;
         }
 
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
         a {
             color: rgb(34, 34, 133);
         }
@@ -54,58 +58,13 @@
             text-decoration: line-through;
         }
 
-        .sidenav {
-            height: 0;
-            width: 15vw;
-            position: fixed;
-            z-index: 1;
-
-            top: 0;
-            left: 85vw;
-            background-color: #111;
-            overflow-x: hidden;
-
-            padding-top: 15vh;
-            transition: 0.5s;
-            opacity: 0;
-        }
-
-        .sidenav a {
-            padding: 1.5vh 2vw 1vh 5vw;
-            text-decoration: none;
-            font-size: 2vw;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-
-            .sidenav a {
-                font-size: 2vw;
-            }
-        }
-
+        /* scroll snapping */
         .sect {
             height: 100vh;
             scroll-snap-align: start;
         }
 
+        /* all the things */
         .main {
             height: 100vh;
             background-image: linear-gradient(to bottom, rgb(235, 248, 255) 0%, rgba(239, 253, 255, 0.721) 25%), url("images/bg3.png");
@@ -115,26 +74,31 @@
             scroll-snap-type: y mandatory;
         }
 
+        /* intro */
         .intro {
             padding: 10vh 10vw;
+        }
+
+        /* work */
+        .work {
+            padding: 2vh 1vw;
         }
 
         .work-container {
             text-align: center;
             background-color: white;
-            margin: 2vh 0;
             padding: 10vh 5vw;
             margin-top: 7.5vh;
         }
 
-        .piece {
-            height: 20vh;
+        /* contact */
+        .contact {
+            padding: 10vh 10vw;
         }
 
         .contact-container {
             text-align: center;
             background-color: white;
-            margin: 10vh 10vw;
             padding: 5vw 5vw;
             margin-top: 20vh;
         }
@@ -144,6 +108,7 @@
             font-size: 5vw;
         }
 
+        /* from https://tobiasahlin.com/moving-letters/#10 */
         .ml10 {
             position: relative;
         }
@@ -159,6 +124,7 @@
             transform-origin: 0 0;
         }
 
+        /* pop up */
         #mask {
             position: absolute;
             left: 0;
@@ -218,43 +184,90 @@
         </div>
 
         <div id="work" class="sect work">
-            [work]
             <div class="work-container">
                 <div class="row">
                     <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
+                        <a href="images/art/kettle.jpg" class="hovereffect">
+                            <img src="images/art/kettle.jpg" alt="image">
+                            <div class="overlay">
+                                <h2>kettle</h2>
+                                <p>charcoal still-life study</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
+                        <a href="images/art/tear.png" class="hovereffect">
+                            <img src="images/art/tear.gif" alt="image">
+                            <div class="overlay">
+                                <h2>tear</h2>
+                                <p>digital artwork</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightgray;">
+                        <a href="images/art/swan.png" class="hovereffect">
+                            <img src="images/art/swan.png" alt="image">
+                            <div class="overlay">
+                                <h2>swan</h2>
+                                <p>charcoal artwork</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
-                    </div>
-                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <p>a</p>
+                        <a href="images/art/apples.png" class="hovereffect">
+                            <img src="images/art/apples.png" alt="image">
+                            <div class="overlay">
+                                <h2>apple stack</h2>
+                                <p>oil on panel</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="piece col-md-6 col-sm-12" style="background-color:lightblue;">
-                        <p>b</p>
+                        <a href="http://webdesign.eastsideprep.org/~fzhang/faye_better_designer/" target="_blank"
+                            class="hovereffect">
+                            <img src="images/art/web.gif" alt="image">
+                            <div class="overlay">
+                                <h2>web design</h2>
+                                <p>html, css & js</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="piece col-md-6 col-sm-12" style="background-color:lightgray;">
-                        <p>c</p>
+                        <a href="https://youtu.be/-KHLeOEx7n0" target="_blank" class="hovereffect">
+                            <img src="images/art/sea.gif" alt="image">
+                            <div class="overlay">
+                                <h2>sea shore</h2>
+                                <p>photoshop speedpaint</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="piece col-md-6 col-sm-12" style="background-color:lightgray;">
-                        <p>c</p>
+                    <div class="piece col-md-6 col-sm-12" style="background-color:lightcyan;">
+                        <a href="images/art/fan.png" class="hovereffect">
+                            <img src="images/art/fan.png" alt="image">
+                            <div class="overlay">
+                                <h2>my village</h2>
+                                <p>chinese painting on fan</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="piece col-md-6 col-sm-12" style="background-color:lightblue;">
-                        <p>b</p>
+                        <a href="images/art/lost.gif" class="hovereffect">
+                            <img src="images/art/lost.gif" alt="image">
+                            <div class="overlay">
+                                <h2>lost</h2>
+                                <p>unity rpg game</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="contact" class="sect contact">
-            [contact]
             <div class="contact-container">
                 <h2 style="margin-top: -2vh;">want to talk to me? no problemo</h2>
                 <div class="container-fluid">
@@ -279,8 +292,19 @@
                 </div>
             </div>
         </div>
+
+        <footer>
+            <div style="padding: 1vw;">
+                email: <a href="mailto: fzhang@eastsideprep.org">fzhang@eastsideprep.org</a> <br>
+                ©Faye Zhang's Portfolio 2019
+            </div>
+        </footer>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
         var navOpen = false;
 
@@ -303,7 +327,7 @@
             //hidden link stuff
             $("#hidden").hide();
 
-            //POP UP SAMPLE CODE
+            //pop ups
             var id = '#dialog';
 
             var maskHeight = $(document).height();
@@ -335,7 +359,7 @@
             });
         });
 
-        //BACKGROUND MOVEMENT
+        //nav
         $("#alink").mouseenter(function () {
             $("#hidden").show();
         });
@@ -346,7 +370,6 @@
             }, 1500)
         });
 
-        //NAV
         function toggleNav() {
             if (navOpen) {
                 $(".navIcon").removeClass("fa-close");

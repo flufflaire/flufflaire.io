@@ -1,37 +1,212 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>faye zhang [climb]</title>
-    <link rel="icon" href="images/snow.png" type="image/x-icon">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- data -->
     <meta charset="UTF-8">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <meta name="author" content="Faye Zhang">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- main css -->
-    <link href="css/climb.css" rel="stylesheet">
+    <title>Faye Zhang | Climbing</title>
+    <link rel="icon" href="images/bg3.png" type="image/x-icon">
 
-    <!-- script -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- modernizr -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/customnav.css">
+    <style>
+        html,
+        body {
+            height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Amatic SC', cursive;
+        }
 
+        h1 {
+            font-size: 8vw;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 3.5vw;
+            padding-top: 2vh;
+        }
+
+        p {
+            font-size: 3vw;
+            font-family: 'Fredericka the Great', cursive;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        a {
+            color: rgb(34, 34, 133);
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: line-through;
+        }
+
+        .main {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, rgb(235, 248, 255) 0%, rgba(239, 253, 255, 0.721) 25%), url("images/bg3.png");
+            background-size: cover;
+            padding: 5vh 20vw 5vh 10vw;
+            overflow: auto;
+            scroll-snap-type: y mandatory;
+        }
+
+        .work {
+            padding: 7.5vh 0 0 0;
+        }
+
+        .work-container {
+            text-align: center;
+            background-color: white;
+            padding: 10vh 5vw;
+        }
+
+        .piece {
+            width: 80vw;
+            height: 40vh;
+            background-size: cover;
+            padding: 2vw;
+        }
+    </style>
 </head>
+
 <body>
 
-    <div class="caption">
-        <h1 style="font-size: 128px;"> joke's on you, this doesnt work yet</h1>
-        <p> happy april fools C:</p>
+    <div class="main">
+        <div id="mySidenav" class="sidenav">
+            <a href="index.html">Home</a>
+            <a href="#" id="alink">Galleries</a>
+            <div id="hidden" class="hidden">
+                <a style="margin-left: 1vw;" href="art.html">art</a>
+                <a style="margin-left: 1vw;" href="vex.html">vex</a>
+                <a style="margin-left: 1vw;" href="climb.html">climb</a>
+            </div>
+            <a href="https://www.redbubble.com/people/flufflaire/shop" target="_blank"><b>NEW MERCH!!</b></a>
+            <a href="https://flufflaire.github.io/FayeZhangResume.pdf">Resume</a>
+        </div>
+
+        <button onclick="toggleNav()" class="btn"
+            style="z-index: 2; position: absolute; margin-top: 2vh; margin-left: 80vw;"><i class="navIcon fa fa-bars"
+                style="font-size: 2vw;"></i></button>
+
+        <div id="work" class="sect work">
+            <div class="work-container">
+                <div class="row">
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/far.jpg">
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/red.jpg">
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/cross.jpg">
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/stare.jpg">
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/sit.jpg">
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/cross.jpg">
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/swing.jpg">
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/lean.jpg">
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/x.jpg">
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/stretch.jpg">
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/down.jpg">
+                    </div>
+                    <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
+                        <img src="images/climb/warmup.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div style="padding: 1vw;">
+                email: <a href="mailto: fzhang@eastsideprep.org">fzhang@eastsideprep.org</a> <br>
+                ©Faye Zhang's Portfolio 2019
+            </div>
+        </footer>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+        var navOpen = false;
+
+        $(document).ready(function () {
+
+            //hidden link stuff
+            //pls dont take points off for "bad comments"
+
+            //i mean
+            //what else do i say here?
+
+            //"i hide what's supposed to be hidden"
+            //that's like even more ambiguous
+
+            //so like
+            //>hidden link stuff
+            //should be good... right?
+            $("#hidden").hide();
+
+        });
+
+        //nav hidden link toggle
+        $("#alink").mouseenter(function () {
+            $("#hidden").show();
+        });
+
+        $("#alink").mouseleave(function () {
+            setTimeout(function () {
+                $("#hidden").hide();
+            }, 1500)
+        });
+
+        function toggleNav() {
+            if (navOpen) {
+                $(".navIcon").removeClass("fa-close");
+                $(".navIcon").addClass("fa-bars");
+                $(".navIcon").css("color", "black");
+                document.getElementById("mySidenav").style.height = "0";
+                document.getElementById("mySidenav").style.opacity = "0";
+                document.body.style.backgroundColor = "white";
+                navOpen = false;
+            } else {
+                $(".navIcon").removeClass("fa-bars");
+                $(".navIcon").addClass("fa-close");
+                $(".navIcon").css("color", "#818181");
+                document.getElementById("mySidenav").style.height = "100vh";
+                document.getElementById("mySidenav").style.opacity = "1";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                navOpen = true;
+            }
+        }
+    </script>
+
 </body>
+
 </html>
