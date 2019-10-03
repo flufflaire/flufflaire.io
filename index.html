@@ -144,7 +144,7 @@
     <div id="boxes">
         <div id="dialog" class="window"
             style="background-color: white; padding: 1vw; text-align: center; height: 30vh; width: 30vw; border-radius: 2vw; z-index: 4;">
-            <h1 style="font-size: 5vw; padding-top: 6vh;"><a href="https://www.redbubble.com/people/flufflaire/shop"
+            <h1 id="popup-style" style="font-size: 5vw; padding-top: 6vh;"><a href="https://www.redbubble.com/people/flufflaire/shop"
                     target="_blank">buy my merch</a></h1>
             <div id="popupfoot" style="position: absolute;"><a href="#" class="close agree"><i class="fa fa-close"
                         style="font-size: 2vw;"></i></a></div>
@@ -158,7 +158,7 @@
             <a href="art.html">Art</a>
             <a href="#work">Work</a>
             <a href="https://www.redbubble.com/people/flufflaire/shop" target="_blank"><b>NEW MERCH!!</b></a>
-            <a href="#contact">Contact</a>
+            <a id="contact-link" href="#contact">Contact</a>
             <a href="https://flufflaire.github.io/FayeZhangResume.pdf">Resume</a>
         </div>
 
@@ -182,11 +182,11 @@
             <div class="work-container">
                 <div class="row">
                     <div class="piece col-md-3 col-sm-6" style="background-color:lightcyan;">
-                        <a href="images/art/kettle.jpg" class="hovereffect">
-                            <img src="images/art/kettle.jpg" alt="image">
+                        <a href="images/art/spaceship.png" class="hovereffect">
+                            <img src="images/art/spaceship.png" alt="image">
                             <div class="overlay">
-                                <h2>kettle</h2>
-                                <p>charcoal still-life study</p>
+                                <h2>spaceship</h2>
+                                <p>digital artwork</p>
                             </div>
                         </a>
                     </div>
@@ -352,6 +352,17 @@
                 $(this).hide();
                 $('.window').hide();
             });
+            
+            if (winW < 1015)
+            {
+                //in case of smol smol bean windows
+                $('.contact-container').hide();
+                $('#contact-link').hide();
+                $(id).css("height", "10vh");
+                $(id).css("font-size", "2em");
+                $('#popup-style').css("padding-top", "2.5vh");
+            }
+
         });
 
         //nav
