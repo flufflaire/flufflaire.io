@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic+Coding');
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: hidden;
+    color: white;
+    font-size: 100%;
+    background-image: url("../images/bg3.png");
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 6vh;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav {
+    position: absolute;
+    margin-top: 2vh;
+    margin-left: 95vw;
+    z-index: 10;
+}
+
+.menu {
+    border: none; 
+    color: rgb(47, 62, 83); 
+    font-size: 150%;
+    cursor: pointer; 
+    background: transparent;
+}
+
+.links {
+    font-size: 1.2em;
+    opacity: 0;
+}
+
+.is-active {
+    animation: onActive 1s ease-out forwards;
+}
+
+/*
+.not-active {
+    animation: offActive 1s ease-out forwards;
+}
+*/
+
+.links-active {
+    animation: linkLoad 0.4s 0.8s ease-out forwards;
+}
+
+.fa-close {
+    animation: onActive 1s ease-out forwards;
+}
+
+/* .links-inactive {
+    animation: linkLoad 0.4s 0.8s ease-in backwards;
+}  */
+
+@keyframes onActive {
+    0% {
+        color: rgb(47, 62, 83);
+    }
+    50% {
+        color: rgb(47, 62, 83);
+    }
+    100% {
+        color:white;
+    }
+}
+
+@keyframes linkLoad {
+    from {
+        opacity: 0;
+        margin-top: -100%;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0%;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>faye's portfolio</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        html,
+        body {
+            height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Amatic SC', cursive;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+            background-color: white;
+            color: rgb(116, 143, 182);
+            padding: 8vh;
+
+            text-align: center;
+            z-index: 1;
+        }
+
+        .nav {
+            position: absolute;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav not-active">
+        <button class="menu" style="position: aboslute;"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="links links-inactive" style="position: absolute;">
+        <div style="background-color: rgb(47, 62, 83); height: 100vh; width: 100vw;">
+            <p style="height: 100%; line-height: 100%; padding-top: 3vh; text-align: center; font-size: 6vh;"> <br><br><br><br> work <br><br><br><br><br><br><br> <a class="ref" href="none-existant.html"> resume </a></p>
+        </div>
+    </div>
+
+    <div class="box">
+        <h1> coming <br> soon </h1>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var isActive = false;
+            $(".menu").click(function () {
+                if (isActive) { //is active
+                    $(".nav").addClass("not-active");
+                    $(".nav").removeClass("is-active");
+                    $(".fa").addClass("fa-bars");
+                    $(".fa").removeClass("fa-close");
+                    $(".links").addClass("links-inactive");
+                    $(".links").removeClass("links-active");
+                    isActive = false;
+                }
+                else { //not active
+                    $(".nav").removeClass("not-active");
+                    $(".nav").addClass("is-active");
+                    $(".fa").removeClass("fa-bars");
+                    $(".fa").addClass("fa-close");
+                    $(".links").removeClass("links-inactive");
+                    $(".links").addClass("links-active");
+                    isActive = true;
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
