@@ -12,15 +12,15 @@
 
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/work.css">
     <style>
         html,
         body {
             cursor: url("../images/cursor.png"), auto;
 
-            overflow-y: hidden;
-            color: rgb(116, 143, 182);
+            color: rgb(47, 62, 83);
             font-size: 100%;
-            background-image: url("../images/bg3.png");
+            background-image: linear-gradient(35deg, rgb(225, 240, 250), white);
 
             overflow-x: hidden;
             font-family: 'Amatic SC', cursive;
@@ -38,7 +38,7 @@
         }
 
         a:hover {
-            color: pink;
+            color: rgb(250, 161, 139);
         }
 
         .nav {
@@ -62,6 +62,11 @@
             width: 10%;
             height: 10%;
         }
+
+        .work-nav h2 {
+            margin-bottom: 10vh;
+            margin-left: 1vw;
+        }
     </style>
 </head>
 
@@ -71,20 +76,33 @@
     </div>
     <div class="links links-inactive" style="position: absolute;">
         <div style="background-color: rgb(47, 62, 83); height: 100vh; width: 100vw;">
-            <p style="height: 100%; line-height: 100%; padding-top: 3vh; text-align: center; font-size: 6vh;">
-                <br><br><br><br><br> <a class="ref" href="index.html">about</a> <br><br> work <br><br> resume X
+            <p style="height: 100%; line-height: 10vh; padding-top: 30vh; text-align: center; font-size: 6vh;">
+                <a class="ref" href="index.html">about</a> <br>
+                <a class="ref" href="work.html">work</a> <br>
+                <a class="ref" href="#">resume</a>
             </p>
         </div>
     </div>
 
-    <div style="margin-left: 10%; margin-top: 10%; border-left: 4px solid rgb(116, 143, 182);
-    height: 60vh; padding-left: 5vh;">
-        <h2>1: web design</h2>
-        <div style="margin-left: 25%;"><img src="images/web.gif"></div>
+    <div class="work-nav" style="position: absolute; margin-left: 10vw; margin-top: 20vh; border-left: 4px solid rgb(47, 62, 83);
+    height: 60vh;">
+        <h2 class="work-active">1: digital art</h2>
+        <h2 class="work-active">2: web design</h2>
+        <h2 class="work-active">3: game design</h2>
+        <h2 class="work-active">4: robotics</h2>
+        <h2 class="work-active">5: programming</h2>
     </div>
 
-    <div id="mouse" style="position: absolute; margin-left: 0%; margin-top: 0%;"><img src="images/cursor.png"
-            alt="curs"></div>
+    <div style="position: aboslute; margin-left: 30vw; margin-top: 15vh; font-size: 3vh;">
+        <img style="width: 40vw; height: auto;" src="images/web.gif">
+        <h2 style="margin-top: 5vh; padding-left: 20vw; font-size: 5vh;">web design</h2>
+        <p>relevant courses:
+        </p>
+        <ul>
+            <li>web design 1</li>
+            <li>advanced web design</li>
+        </ul>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>

@@ -38,24 +38,34 @@
 
         .nav {
             position: absolute;
+        }
 
+        #mouse img{
+            visibility: visible;
+            width: 10%;
+            height: 10%;
         }
     </style>
 </head>
 
-<body>
+<body onmousemove="mouseXFollow(event)">
     <div class="nav not-active">
         <button class="menu" style="position: aboslute;"><i class="fa fa-bars"></i></button>
     </div>
     <div class="links links-inactive" style="position: absolute;">
         <div style="background-color: rgb(47, 62, 83); height: 100vh; width: 100vw;">
-            <p style="height: 100%; line-height: 100%; padding-top: 3vh; text-align: center; font-size: 6vh;"> <br><br><br><br> work <br><br><br><br><br><br><br> <a class="ref" href="none-existant.html"> resume </a></p>
+            <p style="height: 100%; line-height: 100%; padding-top: 3vh; text-align: center; font-size: 6vh;">
+                <br><br><br><br> <a class="ref" href="work.html">work</a> <br><br><br><br><br><br><br> resume X
+            </p>
         </div>
     </div>
 
     <div class="box">
         <h1> coming <br> soon </h1>
     </div>
+
+    <div id="mouse" style="position: absolute; margin-left: 0%; margin-top: 0%;"><img src="images/cursor.png"
+            alt="curs"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
@@ -69,6 +79,7 @@
                     $(".fa").removeClass("fa-close");
                     $(".links").addClass("links-inactive");
                     $(".links").removeClass("links-active");
+
                     isActive = false;
                 }
                 else { //not active
@@ -78,11 +89,19 @@
                     $(".fa").addClass("fa-close");
                     $(".links").removeClass("links-inactive");
                     $(".links").addClass("links-active");
+
                     isActive = true;
                 }
             });
         });
 
+        function mouseXFollow(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            //console.log(" " + x + ", " + y);
+            document.getElementById("mouse").style.marginLeft = "" + (x-10) + "px";
+            document.getElementById("mouse").style.marginTop = "" + (y+10) + "px";
+        }
     </script>
 </body>
 

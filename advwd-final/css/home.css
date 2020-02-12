@@ -2,11 +2,15 @@
 
 html,
 body {
-    font-family: 'Montserrat', sans-serif;
+    cursor: url("../images/cursor.png"), auto;
+
     overflow-y: hidden;
     color: white;
     font-size: 100%;
-    background-image: url("../images/bg3.png");
+    
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Amatic SC', cursive;
 }
 
 h1 {
@@ -14,9 +18,20 @@ h1 {
     font-size: 6vh;
 }
 
+h2 {
+    font-weight: 600;
+    font-size: 3vh;
+    color: rgb(47, 62, 83);
+}
+
 a {
     color: white;
     text-decoration: none;
+    z-index: 10;
+}
+
+a:hover {
+    color: pink;
 }
 
 .nav {
@@ -32,6 +47,7 @@ a {
     font-size: 150%;
     cursor: pointer; 
     background: transparent;
+    z-index: 10;
 }
 
 .links {
@@ -41,25 +57,28 @@ a {
 
 .is-active {
     animation: onActive 1s ease-out forwards;
+    visibility: visible;
 }
 
-/*
+/* 
 .not-active {
-    animation: offActive 1s ease-out forwards;
-}
-*/
+    animation: onActive 1s ease-out backwards;
+} */
 
 .links-active {
     animation: linkLoad 0.4s 0.8s ease-out forwards;
+    margin-top: 0%;
 }
 
 .fa-close {
     animation: onActive 1s ease-out forwards;
 }
 
-/* .links-inactive {
-    animation: linkLoad 0.4s 0.8s ease-in backwards;
-}  */
+.links-inactive {
+    /* animation: linkLoad 0.4s 0.8s ease-in backwards; */
+    cursor: default;
+    margin-top: -100%;
+}
 
 @keyframes onActive {
     0% {

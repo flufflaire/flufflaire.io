@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>faye's portfolio [work]</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        html,
+        body {
+            cursor: url("../images/cursor.png"), auto;
+
+            color: rgb(47, 62, 83);
+            font-size: 100%;
+            background-image: linear-gradient(35deg, rgb(225, 240, 250), white);
+
+            font-family: 'Amatic SC', cursive;
+            height: 200vh;
+            overflow: inherit;
+            width: 80%;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 6vh;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            z-index: 10;
+        }
+
+        a:hover {
+            color: rgb(250, 161, 139);
+        }
+
+        .nav {
+            position: absolute;
+            margin-top: 2vh;
+            margin-left: 95vw;
+            z-index: 10;
+        }
+
+        .menu {
+            border: none;
+            color: rgb(47, 62, 83);
+            font-size: 3vh;
+            cursor: pointer;
+            background: transparent;
+            z-index: 10;
+        }
+
+        #mouse img {
+            visibility: visible;
+            width: 5vw;
+            height: 5vw;
+            position: absolute;
+            margin-top: -100%;
+        }
+
+        .container {
+            display: inline-grid;
+            grid-template-areas:
+                'double double'
+                'vertical single'
+                'vertical single';
+            grid-gap: 2.5vw;
+            grid-row-gap: 5vw;
+            justify-content: stretch;
+        }
+
+        .item-1 {
+            grid-area: double;
+        }
+
+        .item-2 {
+            grid-area: vertical;
+        }
+    </style>
+</head>
+
+<body onmousemove="mouseXFollow(event)">
+    <div class="nav not-active">
+        <button class="menu" style="position: aboslute;"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="links links-inactive" style="position: absolute;">
+        <div style="background-color: rgb(47, 62, 83); height: 100vh; width: 100vw;">
+            <p style="height: 100%; line-height: 10vh; padding-top: 30vh; text-align: center; font-size: 6vh;">
+                <a class="ref" href="index.html">about</a> <br>
+                <a class="ref" href="work2.html">work</a> <br>
+                <a class="ref" href="#">resume</a>
+            </p>
+        </div>
+    </div>
+
+    <div
+        style="position: aboslute; margin-left: 5vw; padding-left: 10vw; padding-top: 15vh; padding-bottom: 20vh; font-size: 3vh; background-color: white;">
+        <p style="position: aboslute; font-weight: 600; text-align: center; font-size: 5vw; margin-bottom: 2vh;">
+            art-work</p>
+        <div class="container">
+
+            <div class="item item-1" style="max-height: 10vw; overflow: hidden;">
+                <img style="width: 75vw; margin-top: -85vw;" src="../images/art/acrylic.jpg"></div>
+            <div class="item item-2" style="max-height: 45vw; overflow: hidden;">
+                <img style="width: 35vw; height: auto;" src="../images/art/database.png">
+            </div>
+            <div class="item item-3">
+                <img style="width: 35vw; height: auto; padding-top: 10vw;" src="../images/art/fan.png">
+                <p>chinese fan paintings</p>
+            </div>
+            <div class="item item-3">
+                <img style="width: 35vw; height: auto;" src="images/web.gif">
+                <p>w-e-b d-e-s-i-g-n</p>
+            </div>
+            <div class="item item-3">
+                <img style="width: 35vw; height: auto;" src="../images/art/sea.gif">
+            </div>
+            <div class="item item-3">
+                <img style="width: 35vw; height: auto;" src="../images/art/tear.gif">
+            </div>
+            <div class="item item-3" style="max-height: 10vw; overflow: hidden; margin-top: -8vh;">
+                <img style="width: 35vw; height: auto; margin-top: -18vh;" src="../images/art/sea.png">
+            </div>
+            <div class="item item-3" style="max-height: 10vw; overflow: hidden; margin-top: -8vh;">
+                <img style="width: 35vw; height: auto; margin-top: -10vh;" src="../images/art/tear.png">
+            </div>
+        </div>
+    </div>
+
+    <div id="mouse"><img class="mouse-img" src="images/cursor.png"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var isActive = false;
+            $(".menu").click(function () {
+                if (isActive) { //is active
+                    $(".nav").addClass("not-active");
+                    $(".nav").removeClass("is-active");
+                    $(".fa").addClass("fa-bars");
+                    $(".fa").removeClass("fa-close");
+                    $(".links").addClass("links-inactive");
+                    $(".links").removeClass("links-active");
+
+                    isActive = false;
+                }
+                else { //not active
+                    $(".nav").removeClass("not-active");
+                    $(".nav").addClass("is-active");
+                    $(".fa").removeClass("fa-bars");
+                    $(".fa").addClass("fa-close");
+                    $(".links").removeClass("links-inactive");
+                    $(".links").addClass("links-active");
+
+                    isActive = true;
+                }
+            });
+
+            $("img").mouseenter(function () {
+                $(".mouse-img").css({ "width": "2vw", "height": "2vw" })
+            });
+
+            $("img").mouseleave(function () {
+                $(".mouse-img").css({ "width": "5vw", "height": "5vw" })
+            });
+        });
+
+        function mouseXFollow(e) {
+            //console.log(" " + x + ", " + y);
+            document.getElementById("mouse").style.marginLeft = "" + e.pageX + "px";
+            document.getElementById("mouse").style.marginTop = "" + e.pageY + "px";
+        }
+    </script>
+</body>
+
+</html>
